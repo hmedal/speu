@@ -1119,7 +1119,7 @@ def runLShaped(sampleScenarios = False, numSamples = 0):
             scenarios = createScenarios(instance.numCapLevels)
     #bendersPrelimStuff(scenarios)
     if(bendersType == 'classic'):
-        bendersFn = bendersClassic_ProbabilityChainModel #Tanveer
+        bendersFn = bendersClassic_ProbabilityChainModel #Tanveer (this is the code I used)
     elif(bendersType == 'callback'):
         bendersFn = bendersCallback_ProbabilityChainModel
     #print "numBunches", numBunches
@@ -1208,8 +1208,8 @@ if __name__ == "__main__":
         print "!!!WARNING: DEBUG MODE!!!"
     print "PROBABILITY CHAIN"
     doPrelimStuff()
-    if(algType == 'lshaped'): #Tanveer
-        runLShaped() #Tanveer
+    if(algType == 'lshaped'): #Tanveer (this is the part of the code I used)
+        runLShaped() #Tanveer (this is the part of the code I used)
     elif(algType == 'randlshaped'):
         print "L-Shaped with sampled scenarios"
         runLShaped(sampleScenarios = True, numSamples = numSAA_first_stage_samples)

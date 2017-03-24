@@ -1,0 +1,12 @@
+#PBS -N probabilityChain_Daskin49_FacPro_p4_allExposed_k2_l2_b0.25_base_type-lshaped_btype-classic_bunch-1_ssAlg-gurobi_m10_n0_n10000_Job
+#PBS -q tiny16core
+
+#PBS -j oe
+
+#PBS -o probabilityChain_Daskin49_FacPro_p4_allExposed_k2_l2_b0.25_base_type-lshaped_btype-classic_bunch-1_ssAlg-gurobi_m10_n0_n10000_Job.$PBS_JOBID
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=2:00:00
+
+cd $PBS_O_WORKDIR
+module load mkl/13.1.0 python/2.7.5 gurobi/5.5.0
+/home/hmedal/scripts/gurobi.sh ~/code/src/python/Impro_submodular/edu/msstate/hm568/impro/probabilityChain/probability_chain_model.py --algType lshaped --exprfile /home/hmedal/exprFiles/imperfectPro/probabilityChain_Daskin49_FacPro_p4_allExposed_k2_l2_b0.25_base_type-lshaped_btype-classic_bunch-1_ssAlg-gurobi_m10_n0_n10000.xml > /home/hmedal/outputFiles/imperfectPro/probabilityChain_Daskin49_FacPro_p4_allExposed_k2_l2_b0.25_base_type-lshaped_btype-classic_bunch-1_ssAlg-gurobi_m10_n0_n10000.log
